@@ -10,6 +10,12 @@ Adapted to obtain gene coordinates from gencode.v41.annotation.gtf which can be 
 -------------------
 STEPS & HOW TO RUN
 -------------------
+
+**Required python libraries:**
+
+argparse, h5py, io, numpy, os, pandas, sys
+
+
 This is run in three steps:
 ---------------------------
 
