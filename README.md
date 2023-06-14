@@ -7,17 +7,15 @@ The objective of this pipeline is to identify putative TF regulatory mechanisms 
 
 Adapted to obtain gene coordinates from gencode.v41.annotation.gtf which can be downloaded here: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.annotation.gtf.gz 
 
+### Requirements
+
+**python libraries:** argparse, h5py, io, numpy, os, pandas, sys
+
+**R packages:** devtools, IRanges, TFBSTools, seqinr, Biostrings
+
 -------------------
 STEPS & HOW TO RUN
 -------------------
-
-**Required python libraries:**
-
-argparse, h5py, io, numpy, os, pandas, sys
-
-**Required R packages:**
-
-devtools, IRanges, TFBSTools, seqinr, Biostrings
 
 
 This is run in three steps:
