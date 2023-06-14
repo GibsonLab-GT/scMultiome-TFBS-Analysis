@@ -11,7 +11,7 @@ Adapted to obtain gene coordinates from gencode.v41.annotation.gtf which can be 
 
 **python libraries:** argparse, h5py, io, numpy, os, pandas, sys
 
-**R packages:** devtools, IRanges, TFBSTools, seqinr, Biostrings
+**R packages:** devtools, IRanges, TFBSTools, seqinr, Biostrings, circlize, gt, paletteer, readr, tidyverse
 
 -------------------
 STEPS & HOW TO RUN
