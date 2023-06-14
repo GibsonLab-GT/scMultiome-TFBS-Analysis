@@ -15,6 +15,10 @@ STEPS & HOW TO RUN
 
 argparse, h5py, io, numpy, os, pandas, sys
 
+**Required R packages:**
+
+devtools, IRanges, TFBSTools, seqinr, Biostrings
+
 
 This is run in three steps:
 ---------------------------
