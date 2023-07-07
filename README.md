@@ -57,3 +57,7 @@ This script generates an adjacency matrix for a selected set of genes and transc
     python ./create_adj_matrix.py -g <gene_list> -d <detfs_list> -t <Master_Summary.txt> -p <path to TFBS Hits file> -o <output directory path>
 
 ### **Step 3.)** Plot interactions as a circos plot
+
+This script takes in the adjacency matrix linking genes and transcription factors to visualize potential regulatory relationships.
+
+    Rscript ./circos_plotter.R <adjacency_matrix.txt> 
