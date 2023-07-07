@@ -1,7 +1,5 @@
 #!/usr/bin/env Rscript
 
-.libPaths("/storage/home/mfisher42/bin/R-4.2.2/library")
-
 library(devtools)
 library(IRanges)
 library(TFBSTools)
