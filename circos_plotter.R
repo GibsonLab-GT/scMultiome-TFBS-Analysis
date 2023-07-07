@@ -6,8 +6,11 @@ library(paletteer)
 library(readr)
 library(tidyverse)
 
-setwd("/Users/maggiebrown/scProject/CD_Multiome/Multiome_07_2022/MAST_DEGs_04042023/All_DEGs_03312023/B_Cells/TFBS_Analysis/Group1/DETFs")
-adj_mat_df <- read_delim("adjacency_matrix_fixed.txt", "\t", escape_double = FALSE, na = "empty", trim_ws = TRUE)
+# To Run:
+# Rscript ./circos_plotter.R <adjacency_matrix.txt> 
+
+args = commandArgs(trailingOnly=TRUE)
+adj_mat_df <- read_delim(args[1], "\t", escape_double = FALSE, na = "empty", trim_ws = TRUE)
 
 ### 1.0 Create Adj. Matrix Input for Circos Plot ###
 # 1.1 Sort by DEGs_Log2FC, Remove DEGs_Log2FC column
