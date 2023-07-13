@@ -1,11 +1,17 @@
 # scMultiome-TFBS-Analysis 
 
+<p align="center">
+    <img src="https://github.com/GibsonLab-GT/scMultiome-TFBS-Analysis/blob/main/tfbs_rationale.jpg">
+</p>
+
 ----------
 OBJECTIVE
 ----------
+
 The objective of this pipeline is to identify putative TF regulatory mechanisms focused on differentially accessible genes (DEGs) and differentially accessible chromatin regions (DARs) obtained from single cell multiome analysis, with scRNA-seq and scATAC-seq data. 
 
 Adapted to obtain gene coordinates from gencode.v41.annotation.gtf which can be downloaded here: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.annotation.gtf.gz 
+
 
 ### Requirements
 
@@ -16,7 +22,6 @@ Adapted to obtain gene coordinates from gencode.v41.annotation.gtf which can be 
 <p align="center">
     <img src="https://github.com/GibsonLab-GT/scMultiome-TFBS-Analysis/blob/main/circos_plot.jpg" width = 600 height = 600>
 </p>
-
 
 -------------------
 STEPS & HOW TO RUN
