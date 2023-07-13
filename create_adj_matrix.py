@@ -13,7 +13,7 @@ import sys
 # for circos plot input
 #
 # To run:
-# python ./create_adj_matrix.py -g <gene_list> -d <detfs_list> -t <Master_Summary.txt> -p <path to TFBS Hits file> -o <output directory path>
+# python ./create_adj_matrix.py -g <gene_list> -d <detfs_list> -t <Master_Summary.txt> -p <path to TFBS Hits file> -o <output directory path> 
 
 # ============================================
 def parse_my_args():
@@ -24,7 +24,7 @@ def parse_my_args():
     parser.add_argument("-p", "--tfbs_hits_path", type = str, help = "path to TFBS Hits files")
     parser.add_argument("-out", "--output_dir", type = str, help = "output directory path")
     return vars(parser.parse_args())
-  
+
 # ============================================
 def get_relscores(dars_list, detf, tfbs_hits_path):
     # get dar_TFBS_Hits.txt file for dar
@@ -98,6 +98,14 @@ if __name__ == "__main__":
         tfbs_hits[gene] = relscores
 
     summary_df = (pd.DataFrame.from_dict(tfbs_hits)).transpose()
+    summary_df = summary_df.dropna(axis = 1, how = "all") # remove empty columns
+
+    # check empty rows; if gene name not a column name and entire row is empty, remove.
+    empty_rows = summary_df.index[summary_df.isnull().all(1)].tolist()
+
+    for gene in empty_rows:
+        if gene not in summary_df.columns.tolist():
+            summary_df = summary_df.drop(gene)
 
     # 4.) Add DEG AvgLog2FC to first column
     summary_df["DEG"] = summary_df.index
@@ -105,4 +113,6 @@ if __name__ == "__main__":
 
     # 4.) write to output:
     filename = outdir + "/adjacency_matrix.txt"
-    final_df.to_csv(filename, index = None, sep = " ", mode = "w")
+    final_df.to_csv(filename, index = None, sep = "\t", mode = "w")
+
+

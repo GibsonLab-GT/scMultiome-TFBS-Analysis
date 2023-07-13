@@ -46,12 +46,12 @@ done
 # 2.) Run TFBSTools for all DARs
 
 mkdir $output_dir/TFBS_Hits
-$Rscript ./scripts/run_TFBSTools.R $output_dir/pwms_subset.txt $output_dir/fasta_files $output_dir/TFBS_Hits/
+$Rscript ./scripts/run_TFBSTools.R "$output_dir"pwms_subset.txt "$output_dir"fasta_files "$output_dir"TFBS_Hits/
 
 # 3.) Generate a "Master" summary table
 
 # For each DEG and DAR pair, get TFBS info
-echo -e "DEG\tDEG_AvgLog2FC\tDAR\tDAR_AvgLog2FC\tDETF\tDETF_AvgLog2FC\tMotif_ID\tStrand\tsiteSeq" > $output_dir/TFBS_Hits/Master_Summary.txt
+echo -e "DEG\tDEG_AvgLog2FC\tDAR\tDAR_AvgLog2FC\tDETF\tDETF_AvgLog2FC\tMotif_ID\tStrand\tsiteSeq" > "$output_dir"TFBS_Hits/Master_Summary.txt
 
 len="$(wc -l $dars_degs | awk '{print $1}')"
 
@@ -92,7 +92,7 @@ do
 		j=$[$j+1]
 
 	done
-	rm $output_dir/TFBS_Hits/temp*txt
+	rm "$output_dir"TFBS_Hits/temp*txt
 
 	# next line
 	line=$(( $line +1 ))

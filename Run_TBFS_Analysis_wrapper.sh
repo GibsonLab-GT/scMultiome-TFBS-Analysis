@@ -38,7 +38,7 @@ echo "STEP 1 of 5: Finding gene coordinates"
 # This step takes in the gene coordinates file from step 1 along with a DARs csv file
 # and an output directory path to generate a file which pairs DEGs with DARs
 
-gene_coords="$output_dir/genelist_coords.txt"
+gene_coords="$output_dir"genelist_coords.txt
 
 echo "STEP 2 of 5: Overlapping DARs"
 python ./scripts/find_overlapping_dars.py -g $gene_coords -d $dars_file -out $output_dir

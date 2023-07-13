@@ -1,4 +1,6 @@
-#!/opt/anaconda3/bin/Rscript
+#!/usr/bin/env Rscript
+
+.libPaths("/storage/home/mfisher42/bin/R-4.2.2/library")
 
 library(devtools)
 library(IRanges)
@@ -41,9 +43,6 @@ for (i in 1:length(fl)){
         DAR <- substr(fl[i], 1, nchar(fl[i])-6)
         fileHits <- paste(output_dir, DAR, "_TFBS_Hits.txt", sep = "")
         sink(fileHits);print(as(siteset, "data.frame"));sink()
-        # desginate output for p-values
-        #filePvals <- paste(output_dir, DAR, "_TFBS_Pvalues.txt", sep = "")
-        #sink(filePvals);print(pvalues(siteset, type="sampling"));sink()
 }
 
 
