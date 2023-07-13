@@ -23,7 +23,7 @@ Clone this repository, then enter it and download the gencode.v41.annotation.gtf
     wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.annotation.gtf.gz
     gunzip gencode.v41.annotation.gtf.gz
 
-A working example is provided in the docs directory: 
+A working example with practice data is provided in the docs directory: 
 
 https://github.com/GibsonLab-GT/TFBS-Analysis-For-Multiome-Data/blob/main/docs/working_example.md 
 
