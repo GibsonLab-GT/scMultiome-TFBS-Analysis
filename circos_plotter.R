@@ -1,4 +1,6 @@
-#!/usr/bin/env Rscript
+#!/opt/anaconda3/bin/Rscript
+
+.libPaths("/Library/Frameworks/R.framework/Versions/4.2/Resources/library")
 
 library(circlize)
 library(gt)
@@ -10,7 +12,7 @@ library(tidyverse)
 # Rscript ./circos_plotter.R <adjacency_matrix.txt> 
 
 args = commandArgs(trailingOnly=TRUE)
-adj_mat_df <- read_delim(args[1], "\t", escape_double = FALSE, na = "empty", trim_ws = TRUE)
+adj_mat_df <- read.delim(args[1])
 
 ### 1.0 Create Adj. Matrix Input for Circos Plot ###
 # 1.1 Sort by DEGs_Log2FC, Remove DEGs_Log2FC column
