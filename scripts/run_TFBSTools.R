@@ -1,4 +1,4 @@
-#!/usr/bin/env Rscript
+#!/opt/anaconda3/bin/Rscript
 
 library(devtools)
 library(IRanges)
