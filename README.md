@@ -23,7 +23,9 @@ Clone this repository, then enter it and download the gencode.v41.annotation.gtf
     wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.annotation.gtf.gz
     gunzip gencode.v41.annotation.gtf.gz
 
-A working example is provided with required input in the "example" directory; see below for how to run.
+A working example is provided in the docs directory: 
+
+https://github.com/GibsonLab-GT/TFBS-Analysis-For-Multiome-Data/blob/main/docs/working_example.md 
 
 This is run in three steps:
 ---------------------------
@@ -61,7 +63,7 @@ This step takes in the DARs found to overlap DEGs and scan the sequences for pot
 
 This script generates an adjacency matrix for a selected set of genes and transcription factors to summarize potential regulatory relationships. The output is used for generating a circos plot for visualization. The Master_Summary.txt file is generated in the "Query DARs for TFBS" step.
 
-    python ./create_adj_matrix.py -g <gene_list.txt> -d <detfs_list.txt> -t <Master_Summary.txt> -p <path to TFBS Hits file> -o <full_output_directory_path>
+    python ./create_adj_matrix.py -g <gene_list.txt> -d <detfs_list.txt> -t <Master_Summary.txt> -p <full_output_directory_path/TFBS_Hits> -o <full_output_directory_path>
 
 ### **Step 3.)** Plot interactions as a circos plot
 
@@ -78,17 +80,3 @@ Input Files
 **detfs_list.txt**: A list of differentially expressed transcription factors (DETFs) of interest, potential regulators of differentially expressed genes in the gene_list.txt file. Same format as gene_list.txt, with the first columns is "DEG" with the genenames, and the second column is the "avg_log2FC" (see detfs_list.txt in the example directory).
 
 **dars_list.txt**: Full output of differentially accessible regions for the same copmarison used for identifying DEGs in the gene_list.txt and DETFs in the detfs_list.txt. 
-
------------
-WORKING EXAMPLE
------------
-
-Clone this repository, then enter it and download the gencode.v41.annotation.gtf.gz file:
-
-    cd TFBS-Analysis-For-Multiome-Data
-    wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.annotation.gtf.gz
-    gunzip gencode.v41.annotation.gtf.gz
-    
-Run the automated pipeline on the example data:
-
-    ./Run_TBFS_Analysis_wrapper.sh -g example/gene_list.txt -t example/detfs_list.txt -d example/dars_list.csv -o $PWD/example/Results/
