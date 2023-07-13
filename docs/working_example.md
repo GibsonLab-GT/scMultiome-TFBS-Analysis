@@ -21,7 +21,7 @@ Clone this repository, then enter it and download the gencode.v41.annotation.gtf
 
 **Step 3:** Generate circos plot:
 
-    ./Rscript ./circos_plotter.R $PWD/example/Results/adjacency_matrix.txt
+    Rscript ./circos_plotter.R $PWD/example/Results/adjacency_matrix.txt
 
 
     
