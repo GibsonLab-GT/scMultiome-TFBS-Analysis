@@ -17,13 +17,18 @@ Adapted to obtain gene coordinates from gencode.v41.annotation.gtf which can be 
 STEPS & HOW TO RUN
 -------------------
 
+Clone this repository, then enter it and download the gencode.v41.annotation.gtf.gz file:
+
+    cd TFBS-Analysis-For-Multiome-Data
+    wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.annotation.gtf.gz
+    gunzip gencode.v41.annotation.gtf.gz
 
 This is run in three steps:
 ---------------------------
 
 ### **Step 1:** This step is the bulk of the analysis. The automated wrapper script can be run as follows:
 
-    ./Run_TBFS_Analysis_wrapper.sh -g <gene_list.txt> -t <detfs_list.txt> -d <dars._list.txt> -o <output_directory_path>
+    ./Run_TBFS_Analysis_wrapper.sh -g <gene_list.txt> -t <detfs_list.txt> -d <dars_list.txt> -o <output_directory_path>
 
 #### To run Step 1 manually:
 
@@ -60,4 +65,15 @@ This script generates an adjacency matrix for a selected set of genes and transc
 
 This script takes in the adjacency matrix linking genes and transcription factors to visualize potential regulatory relationships.
 
-    Rscript ./circos_plotter.R <adjacency_matrix.txt> 
+    Rscript ./circos_plotter.R <adjacency_matrix.txt>
+
+-----------
+Input Files
+-----------
+
+**gene_list.txt**: A list of differentially expressed genes (DEGs) of interest, such as a pathway, potential targets of a transcription factor. First columns is "DEG" with the genenames, and the second column is the "avg_log2FC" (see gene_list.txt in the example directory).
+
+**detfs_list.txt**: A list of differentially expressed transcription factors (DETFs) of interest, potential regulators of differentially expressed genes in the gene_list.txt file. Same format as gene_list.txt, with the first columns is "DEG" with the genenames, and the second column is the "avg_log2FC" (see detfs_list.txt in the example directory).
+
+**
+
