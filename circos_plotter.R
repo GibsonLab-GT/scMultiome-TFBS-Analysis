@@ -98,7 +98,7 @@ legend(x = 0.82, y = 1.06,
        y.intersp = 0.2,
        cex = 1.2, text.font = 2,
        box.lty = 0,
-       title = "Log2FC",
+       title = "Gene Expression Log2FC",
        title.adj = 0.7
 )
 # 4.3 Plot Color Scale Gradient
