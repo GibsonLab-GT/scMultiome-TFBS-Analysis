@@ -1,7 +1,5 @@
 #!/opt/anaconda3/bin/Rscript
 
-.libPaths("/Library/Frameworks/R.framework/Versions/4.2/Resources/library")
-
 library(circlize)
 library(gt)
 library(paletteer)
