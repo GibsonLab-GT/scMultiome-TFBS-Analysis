@@ -27,6 +27,10 @@ A working example with practice data is provided in the docs directory:
 
 https://github.com/GibsonLab-GT/scMultiome-TFBS-Analysis/blob/main/docs/working_example.md 
 
+For more details on the intermediate files and directories generated, please see:
+
+https://github.com/GibsonLab-GT/scMultiome-TFBS-Analysis/blob/maindocs/intermediate_files_and_directories.md
+
 This is run in three steps:
 ---------------------------
 
