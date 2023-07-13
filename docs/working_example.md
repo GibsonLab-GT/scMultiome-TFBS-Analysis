@@ -1,11 +1,11 @@
-# TFBS-Analysis-For-Multiome-Data
+# scMultiome-TFBS-Analysis 
 
 ## Working Example
 
 
 Clone this repository, then enter it and download the gencode.v41.annotation.gtf.gz file:
 
-    cd TFBS-Analysis-For-Multiome-Data
+    cd scMultiome-TFBS-Analysis 
     wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.annotation.gtf.gz
     gunzip gencode.v41.annotation.gtf.gz
     
