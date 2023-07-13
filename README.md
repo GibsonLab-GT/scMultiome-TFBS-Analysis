@@ -32,7 +32,7 @@ This is run in three steps:
 
 ### **Step 1:** This step is the bulk of the analysis. The automated wrapper script can be run as follows:
 
-    ./Run_TBFS_Analysis_wrapper.sh -g <gene_list.txt> -t <detfs_list.txt> -d <dars_list.txt> -o <full_output_directory_path>
+    ./Run_TBFS_Analysis_wrapper.sh -g <gene_list.txt> -t <detfs_list.txt> -d <dars_list.csv> -o <full_output_directory_path>
 
 #### To run Step 1 manually:
 
@@ -46,7 +46,7 @@ This step takes in a list of genes and uses the gencode.v41.annotation.gtf file 
 
 This step takes in the gene coordinates file from step 1 along with a DARs csv file and an output directory path to generate a file which pairs DEGs with DARs. The genelist_coords.txt file is created in the "Find gene coordiantes" step.
 
-    python ./scripts/find_overlapping_dars.py -g <genelist_coords.txt> -d <dars_list.txt> -out <full_output_directory_path>
+    python ./scripts/find_overlapping_dars.py -g <genelist_coords.txt> -d <dars_list.csv> -out <full_output_directory_path>
 
 #### 1.3) Get DNA sequence for DARs overlapping DEGs
 This step takes in relevant DARs and obtains hg38 reference sequences as a fasta file via UCSC. The dars_degs.txt file is generated in the "Find DARs overlapping gene body (TSS-500kb - TES+100kb)" step.
@@ -79,4 +79,4 @@ Input Files
 
 **detfs_list.txt**: A list of differentially expressed transcription factors (DETFs) of interest, potential regulators of differentially expressed genes in the gene_list.txt file. Same format as gene_list.txt, with the first columns is "DEG" with the genenames, and the second column is the "avg_log2FC" (see detfs_list.txt in the example directory).
 
-**dars_list.txt**: Full output of differentially accessible regions for the same copmarison used for identifying DEGs in the gene_list.txt and DETFs in the detfs_list.txt. 
+**dars_list.csv**: Full output of differentially accessible regions for the same copmarison used for identifying DEGs in the gene_list.txt and DETFs in the detfs_list.txt (see dars_list.csv in the example directory). 
