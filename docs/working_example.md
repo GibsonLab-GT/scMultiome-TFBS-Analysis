@@ -23,8 +23,11 @@ Clone this repository, then enter it and download the gencode.v41.annotation.gtf
 
     Rscript ./circos_plotter.R $PWD/example/Results/adjacency_matrix.txt
 
+The working example should produce the plot below. The broken inner circle indicates a starting point of a TF to target gene relationship. For example, the TF PRDM1 has blue line starting from the inne broken circle that connects to KLF2, suggesting that PRDM1 has a TF binding site in a DAR within the cis-regulatory window for KLF2. The colors indicate the avgLog2FC from a differential comparison (ie. the DEG avgLog2FC), so red genes indicate genes which have a positive avgLog2FC and blue indicate genes with a negative avgLog2FC. 
 
-    
+<p align="center">
+    <img src="https://github.com/GibsonLab-GT/scMultiome-TFBS-Analysis/blob/main/circos_plot.jpg" width = 600 height = 600>
+</p>
 
 
     
