@@ -2,7 +2,7 @@
 
 ## Working Example
 
-This is a working example to see how status specific transcription factors may be regulating each other.
+This is a working example to see how differentially expressed transcription factors may be regulating each other.
 
 
 Clone this repository, then enter it and download the gencode.v41.annotation.gtf.gz file:
