@@ -15,13 +15,11 @@ Adapted to obtain gene coordinates from gencode.v41.annotation.gtf which can be 
 
 ### Requirements
 
+<img src="https://github.com/GibsonLab-GT/scMultiome-TFBS-Analysis/blob/main/circos_plot.jpg" align = right width = 525 height = 525>
+
 **python libraries:** argparse, h5py, io, numpy, os, pandas, sys
 
 **R packages:**  Biostrings, circlize, devtools, gt, IRanges, paletteer, readr, seqinr, TFBSTools, tidyverse
-
-<p align="center">
-    <img src="https://github.com/GibsonLab-GT/scMultiome-TFBS-Analysis/blob/main/circos_plot.jpg" width = 600 height = 600>
-</p>
 
 -------------------
 STEPS & HOW TO RUN
