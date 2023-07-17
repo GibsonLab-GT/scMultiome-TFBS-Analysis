@@ -91,4 +91,4 @@ Input Files
 
 **detfs_list.txt**: A list of differentially expressed transcription factors (DETFs) of interest, potential regulators of differentially expressed genes in the gene_list.txt file. Same format as gene_list.txt, with the first columns is "DEG" with the genenames, and the second column is the "avg_log2FC" (see detfs_list.txt in the example directory).
 
-**dars_list.csv**: Full output of differentially accessible regions for the same copmarison used for identifying DEGs in the gene_list.txt and DETFs in the detfs_list.txt (see dars_list.csv in the example directory). 
+**dars_list.csv**: Full output of differentially accessible regions (DARs) for the same comparison used for identifying DEGs in the gene_list.txt and DETFs in the detfs_list.txt (see dars_list.csv in the example directory). 
